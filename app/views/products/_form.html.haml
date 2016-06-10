@@ -7,5 +7,13 @@
         = f.input :description
         = f.input :manufacturer
 
+    .col-md-6
+      %h3 Prices
+      #prices
+        = f.simple_fields_for :prices do |price|
+          = render 'price_fields', f: price
+        .links
+          = link_to_add_association 'add price', f, :prices
+
   .form-actions
     = f.button :submit

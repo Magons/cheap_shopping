@@ -14,6 +14,7 @@ gem 'bootstrap-wysihtml5-rails'
 
 # Form builder
 gem 'simple_form'
+gem 'cocoon'
 
 # Authorizatization & authentication
 # gem 'devise'
