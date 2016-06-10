@@ -1,25 +1,30 @@
-%h1 Listing products
+%h1= Product.model_name.human.pluralize
 
-%table
+.row
+  .col-xs-offset-6.col-xs-6.form-inline.text-right.mb-10
+    .form-group
+      = link_to t('helpers.buttons.new'),
+        new_product_path,
+        class: 'btn btn-default'
+
+%table.table.table-hover
   %thead
     %tr
       %th Name
       %th Description
       %th Manufacturer
-      %th
-      %th
-      %th
+      %th Price
+      %th.thin-column
+      %th.thin-column
 
   %tbody
     - @products.each do |product|
       %tr
-        %td= product.name
+        %td= link_to product.name, product
         %td= product.description
         %td= product.manufacturer
-        %td= link_to 'Show', product
-        %td= link_to 'Edit', edit_product_path(product)
-        %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Product', new_product_path
+        %td= price(product)
+        %td= link_to '', edit_product_path(product),
+            class: 'btn btn-default glyphicon glyphicon-edit'
+        %td= link_to '', product, method: :delete,
+            class: 'btn-danger btn btn-default glyphicon glyphicon-trash'

@@ -1,0 +1,38 @@
+en:
+  helpers:
+    search_for: Search for...
+    loading: Loading ...
+    actions: "Actions"
+    select: Select
+    links:
+      ok: Ok
+      add: "Add"
+      show: "Show"
+      edit: "Edit"
+      back: "Back"
+      cancel: "Cancel"
+      confirm: "Are you sure?"
+      destroy: "Delete"
+      unlink: "Unlink"
+      new: "New"
+      remove: "Remove"
+      messages: "Messages"
+      remove_subscription: Remove Subscription
+      override: Override
+      disable: Disable
+      enable: Enable
+      import_users: Import Users
+      csv: CSV
+      preview: Preview
+    titles:
+      add: "Add %{name}"
+      edit: "Editing %{name}"
+      save: "Save"
+      new: "New %{name}"
+      delete: "Delete"
+      listing: "Listing %{name}"
+    buttons:
+      new: New
+    submit:
+      create: Create
+      update: Update

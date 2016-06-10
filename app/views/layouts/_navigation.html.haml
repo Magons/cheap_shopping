@@ -4,8 +4,8 @@
       %a= image_tag 'logo.png', size: '50x50'
 
     %ul.nav.navbar-nav
-      %li= link_to t(:profiles, scope: scope), profiles_users_path
-      %li
+      %li= link_to Product.model_name.human.pluralize, products_path
+      %li= link_to Market.model_name.human.pluralize, markets_path
 
     / TODO: before do auth
 
