@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Type:
+  = @price.type
+%p
+  %b Market:
+  = @price.market
+%p
+  %b Product:
+  = @price.product
+
+= link_to 'Edit', edit_price_path(@price)
+\|
+= link_to 'Back', prices_path
