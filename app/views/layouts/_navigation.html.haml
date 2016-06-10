@@ -1,0 +1,23 @@
+%nav.navbar.navbar-default
+  .container
+    .navbar-header
+      %a= image_tag 'logo.png', size: '50x50'
+
+    %ul.nav.navbar-nav
+      %li= link_to t(:profiles, scope: scope), profiles_users_path
+      %li
+
+    / TODO: before do auth
+
+    / .pull-right
+    /   %ul.nav.navbar-nav
+    /     %li.dropdown
+    /       %a.dropdown-toggle{'data-toggle': 'dropdown', href: '#'}
+    /         = current_user.email
+    /         %b.caret
+    /       %ul.dropdown-menu
+    /         %li= link_to(t('helpers.links.edit'), edit_polymorphic_path(current_user.profile)) if policy(current_user.profile).edit?
+    /         %li= link_to t(:log_out, scope: scope), destroy_user_session_path, method: :delete
+    /         - if remember_user?
+    /           %li.divider
+    /           %li= link_to t('profiles.back_to_previous'), previous_profiles_path, method: :post
