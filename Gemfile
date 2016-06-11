@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 gem 'pg'
 
+# Controller helpers
+gem 'responders'
+
 # Assets & HTML
 gem 'sass-rails', '~> 5.0'
 gem 'haml-rails'
@@ -15,6 +18,18 @@ gem 'bootstrap-wysihtml5-rails'
 # Form builder
 gem 'simple_form'
 gem 'cocoon'
+
+# Bower proxy
+source 'https://rails-assets.org' do
+  gem 'rails-assets-angular'
+  gem 'rails-assets-angular-resource'
+  gem 'rails-assets-angular-bootstrap'
+  gem 'rails-assets-angular-sanitize'
+  gem 'rails-assets-ng-textcomplete'
+  gem 'rails-assets-angular-xeditable'
+  gem 'rails-assets-angular-flash-alert'
+end
+
 
 # Authorizatization & authentication
 # gem 'devise'

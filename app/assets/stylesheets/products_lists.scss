@@ -1,3 +1,7 @@
-// Place all the styles related to the ProductsLists controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.list-group-item .glyphicon-remove {
+    display: none;
+}
+
+.list-group-item:hover .glyphicon-remove {
+    display: block;
+}

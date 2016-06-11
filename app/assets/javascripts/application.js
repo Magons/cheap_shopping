@@ -14,4 +14,15 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require cocoon
+//= require angular
+//= require angular-resource
+//= require angular-bootstrap
+//= require angular-sanitize
+//= require ng-textcomplete
+//= require angular-xeditable
+//= require angular-flash-alert
 //= require_tree .
+
+$(function() {
+
+});

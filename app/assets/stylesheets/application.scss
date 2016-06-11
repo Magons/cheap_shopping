@@ -1,2 +1,22 @@
+/*
+  *= require angular-xeditable
+  *= require angular-flash-alert
+*/
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'products_lists';
+
+.pt-2 {
+  padding-top: 2px;
+}
+
+.editable-empty {
+  color: #777 !important;
+  border-bottom: none;
+  font-style: normal !important;
+}
+
+.editable-click {
+  border-bottom: none !important;
+}

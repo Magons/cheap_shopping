@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  resources :products_lists
+  resources :products_lists do
+    get 'cost_calculation', on: :collection
+  end
   resources :prices
   resources :products
   resources :markets
 
-  root 'products#index'
+  root 'products_lists#new'
 end

@@ -1,5 +1,39 @@
-%h1 New products_list
+.container{ 'ng-app': 'products_lists', 'ng-controller': 'ProductsListsController as lists',
+  'ng-init': 'lists.init()' }
+  .col-md-6.col-md-offset-3
+    %flash-message{ 'duration': '5000', 'show-close': 'true', 'on-dismiss': 'myCallback(flash);' }
+      .alert.alert-success.text-center.alert-dismissible{ role: 'alert' }
+        %button{ 'type': 'button', 'class': 'close', 'data-dismiss': 'alert', 'aria-label': 'Close'}
+          %span{ 'aria-hidden': 'true' }
+            &times;
+        {{ flash.text }}
+    .panel.panel-default
+      .panel-heading{ 'ng-model': 'name' }
+        %a{ href: '#', 'editable-text': 'products_list.name' }
+          {{ products_list.name || 'Products List' }}
+      .panel-body
+        %form{ 'ng-submit': 'lists.add_product(product)' }
+          %input.form-control.form-control-lg{ textcomplete: true,
+            members: 'lists.products.items',
+            'ng-model': 'product_name',
+            'ng-change': 'product',
+            message: 'product_name',
+            type: 'text',
+            'placeholder': 'Type a product name' }
+      %ul.list-group{ 'ng-repeat': 'product in lists.added_products.items track by $index' }
+        %li.list-group-item
+          {{product.name}}
+          %a.danger{ 'ng-click': 'lists.remove_product($index)' }
+            %span.glyphicon.glyphicon-remove.pull-right.pt-2
 
-= render 'form'
 
-= link_to 'Back', products_lists_path
+    .text-center
+      %button.btn.btn-primary.btn-lg{ 'ng-click': 'lists.products_lists.create()' }
+        Save List
+      %button.btn.btn-primary.btn-lg
+        Calculate The Cost
+
+
+
+
+
